@@ -7,7 +7,7 @@ settings = sublime.load_settings('RecenterTopBottom.sublime-settings')
 
 class Pref:
     def load(self):
-        Pref.positions = settings.get('positions', ['top', 'middle', 'bottom'])
+        Pref.positions = settings.get('recenter_positions', ['top', 'middle', 'bottom'])
 Pref = Pref()
 Pref.load()
 settings.add_on_change('reload', lambda: Pref.load())
